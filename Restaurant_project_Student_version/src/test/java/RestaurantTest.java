@@ -74,10 +74,14 @@ class RestaurantTest {
 
 
     @Test
-    public void calculating_total_for_the_items_choosen_and_total_is_not_correct() {
+    public void calculating_total_for_the_items_choosen_and_total_is_correct() {
+        restaurant.finalitems();
+        assertEquals("100",restaurant.menu_total(););
             }
     @Test
     public void choosen_item_is_not_present_in_menu_and_throws_exception() {
+
+        assertNotNull(restaurant.finalitems());
     }
     
 

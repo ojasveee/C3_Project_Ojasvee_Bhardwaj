@@ -63,6 +63,26 @@ public class Restaurant {
 
         menu.remove(itemToBeRemoved);
     }
+    public void  finalitems() throws itemNotFoundException
+    {
+        boolean flag;
+        for (Item item : menu) {
+            if (flag = true)       //Set flag for each item chosen
+                choosed.add(item);
+            else
+                throw new itemNotFoundException(item.getName());
+        }
+        menu_total(choosed);
+    }
+
+    public void menu_total( List<Item> items){
+        int total=0;
+        for (Item item : items) {
+            total = total + item.getprice();
+        }
+
+        System.out.println("Your order will cost:"+total);
+    }
 
 
     public void displayDetails(){
